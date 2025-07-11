@@ -1,0 +1,83 @@
+/*======================================================================== aboust us */
+.about-us-primary {
+    &__row {
+        + .about-us-primary__row {
+            margin-top: 80px;
+        }
+        
+        .heading-tertiary__left {
+            .line {
+                display: none;
+            }
+        }
+        &:nth-child(odd) {
+            .column-left__content {
+                padding-right: 40px;
+            }
+        }
+        
+        &:nth-child(even) {
+            .column-left {
+                order: 2;
+                .heading-tertiary__icon {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                
+                .title-2 {
+                    justify-content: flex-end;
+                }
+                
+                .column-left__content {
+                    text-align: right;
+                    padding-left: 40px;
+                }
+            }
+            .column-right {
+                order: 1;
+            }
+        }
+        
+    }
+}
+/*======================================================================== nhan su */
+.human-resources-primary {
+    &__row-one {
+        .column-one {
+            .article-row-one {
+                .info-item {
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 5px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 999px;
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+    .column-inner {
+        .article {
+            position: relative;
+            border: 2px solid transparent;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .article-content {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            left: 12px;
+        }
+    }
+}
