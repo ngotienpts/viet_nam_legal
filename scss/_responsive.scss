@@ -285,6 +285,10 @@
     .d-lg-grid {
         display: grid;
     }
+    .w-lg-full {
+        width: 100%;
+        max-width: 100%;
+    }
     .w-lg-700 {
         max-width: 700px;
         margin: auto;
@@ -299,6 +303,16 @@
     }
     .mt-lg-20 {
         margin-top: 20px;
+    }
+    .mt-lg-30 {
+        margin-top: 30px;
+    }
+    .mt-lg-40 {
+        margin-top: 40px;
+    }
+
+    .col-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .border-lg-10 {
@@ -318,6 +332,14 @@
     // -------------------------------------------------------------------- index
 
     // --------------------------------------------------------------------cate
+    // detail nhan su
+    .human-resources-detail-primary {
+        &__block-one {
+            .article-img {
+                padding-bottom: 56.25%;
+            }
+        }
+    }
 
     // --------------------------------------------------------------------detail
 
@@ -355,6 +377,12 @@
     .gap-md-10 {
         grid-gap: 0.625rem;
         gap: 0.625rem;
+    }
+    .mt-md-0 {
+        margin-top: 0;
+    }
+    .mt-md-20 {
+        margin-top: 20px;
     }
     .py-md-30 {
         padding-top: 30px;
@@ -498,6 +526,42 @@
     
 
     // --------------------------------------------------------------------cate
+    // nhan su
+    .human-resources-primary {
+        &__row-one {
+            .column-one {
+                .article-img {
+                    padding-bottom: 56.25%;
+                }
+            }
+        }
+    }
+    // detail nhan su
+    .human-resources-detail-primary {
+        &__heading {
+            .title-2 {
+                font-size: 40px;
+            }
+        }
+
+        &__block-two {
+            padding: 40px 20px;
+        }
+
+        &__block-three {
+            padding: 40px 20px;
+
+            .list {
+                .item {
+                    width: 45%;
+                }
+            }
+        }
+
+        &__block-four {
+            padding: 40px 20px;
+        }
+    }
     // ---------------------------------about us
     .about-us-primary {
         &__row {
@@ -869,6 +933,77 @@
                 margin-top: 10px;
             }
             .article-des {
+                font-size: 16px;
+            }
+        }
+    }
+    // detail nhan su
+    .human-resources-detail-primary {
+        &__heading {
+            .title-1 {
+                text-align: center;
+            }
+            .title-2 {
+                font-size: 27px;
+                text-align: center;
+            }
+        }
+
+        &__block-one {
+            .article-content {
+                padding: 20px 15px;
+            }
+
+            .contact {
+                display: block;
+
+                .contact-item + .contact-item {
+                    margin-top: 15px;
+                }
+            }
+
+            .des {
+                font-size: 16px;
+            }
+        }
+
+        &__block-two {
+            padding: 20px 15px;
+            margin-top: 20px;
+
+            .list {
+                font-size: 16px;
+            }
+        }
+
+        &__block-three {
+            padding: 20px 15px;
+            margin-top: 20px;
+
+            .list {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                align-items: stretch;
+                .item {
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    &-text {
+                        font-size: 20px;
+                        padding-left: 0;
+                        margin-top: 12px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &__block-four {
+            padding: 20px 15px;
+            margin-top: 20px;
+
+            .list {
                 font-size: 16px;
             }
         }

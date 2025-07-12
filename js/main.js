@@ -329,6 +329,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+    // khởi tạo slider gallery secondary
+    function initSliderGallerySecondary() {
+        const gallerrySecondary = document.querySelectorAll(
+            ".js__swiperGalleryContainerSecondary"
+        );
+        gallerrySecondary.forEach((item) => {
+            var sliderLarge = item.querySelector(".js__swiperGalleryLarge");
+            var sliderSmall = item.querySelector(".js__swiperGallerySmall");
+            var next = item.querySelector(".swiper-button-next");
+            var prev = item.querySelector(".swiper-button-prev");
+
+            var small = new Swiper(sliderSmall, {
+                spaceBetween: 15,
+                slidesPerView: 5, 
+                slidesPerGroup: 1,
+                watchSlidesProgress: true,
+                watchOverflow: true,
+                freeMode: false, 
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: next || null,
+                    prevEl: prev || null,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 15,
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    1200: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+            var large = new Swiper(sliderLarge, {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                observer: true,
+                    observeParents: true,
+                    grabCursor: true,
+              
+                thumbs: {
+                    swiper: small,
+                },
+            });
+
+            small.on('click', function () {
+                large.slideTo(small.clickedIndex);
+            });
+
+        });
+    }
 
     // khởi tạo slider scale center
     function initSliderScaleCenter() {
@@ -371,52 +433,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-
-    // xử lý sự kiện show menu desk
-    function handleMenuDesk () {
-        const menuItems = document.querySelectorAll('.js__menuItem');
-        const dropdownItems = document.querySelectorAll('.js__dropdownItem');
-
-        if (menuItems.length === 0  && dropdownItems.length === 0) return;
-        let activeItem = null;
-        
-        menuItems.forEach((menuItem)=>{
-            const showMenuItem = menuItem.querySelector('.js__showMenuContainer');
-
-            if(!showMenuItem) return
-            
-            showMenuItem.onclick = function() {
-                // khi item đang mở
-                if (activeItem === menuItem) {
-                    menuItem.classList.remove('show'); 
-                    activeItem = null; 
-                } else {
-                    // khi không có item nào mở
-                    if (activeItem) {
-                        activeItem.classList.remove('show');
-                    }
-                    menuItem.classList.add('show');
-                    activeItem = menuItem; 
-                    
-                }  
-                
-            }
-
-        });
-
-        dropdownItems.forEach((dropdownItem)=>{
-            const showDropdownItem = dropdownItem.querySelector('.js__showDropdown');
-            
-            showDropdownItem.onclick = function() {
-                dropdownItem.classList.toggle('active')
-                
-            }
-            
-        });
-        
-        
-    }
-
     // xử lý sự kiện show menu mobile
     function handleMenuMobile () {
         // show menu
@@ -591,7 +607,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Khởi tạo tất cả các chức năng
     function initApp() {
         handleShowSearchMb();
-        handleMenuDesk();
         handleMenuMobile();
         // slide
         initSliderOneItems();
@@ -599,6 +614,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderFourItems();
         initSliderFiveItems();
         initSliderGalleryPrimary();
+        initSliderGallerySecondary();
         initSliderScaleCenter();
         // end slide
         handleBackTop();

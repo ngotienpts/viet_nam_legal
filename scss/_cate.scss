@@ -1,3 +1,22 @@
+.social-primary {
+    &__item {
+        padding: 5px;
+    }
+    &__link {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        height: 16px;
+        width: auto;
+    }
+}
 /*======================================================================== aboust us */
 .about-us-primary {
     &__row {
@@ -64,6 +83,49 @@
                 }
             }
         }
+
+        .article-row-one {
+        .info-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 4px;
+              height: 4px;
+              border-radius: 999px;
+              background-color: #333;
+            }
+        }
+      }
+
+      .article-row-two {
+        .list {
+          .item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            margin-right: 20px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 6px;
+              height: 6px;
+              border-radius: 999px;
+              background-color: #A61B28;
+            }
+          }
+        }
+      }
     }
     .column-inner {
         .article {
@@ -78,6 +140,132 @@
             bottom: 12px;
             right: 12px;
             left: 12px;
+        }
+    }
+}
+
+.human-resources-detail-primary {
+    .heading-quaternary {
+        .line {
+            background-color: #A61B28;
+        }
+    }
+    .article-download {
+        padding: 11px 25px;
+        background-color: #A61B28;
+    }
+    &__block-one {
+        .article-content {
+            .info-item {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 5px;
+                color: #666;
+
+                &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 4px;
+                border-radius: 999px;
+                background-color: #333;
+                }
+            }
+
+            .contact {
+                &-icon {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 999px;
+                    background-color: #A61B28;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    &__block-two {
+        padding: 40px 80px;
+        .list {
+            .item {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 5px;
+
+                &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 4px;
+                border-radius: 999px;
+                background-color: #333;
+                }
+            }
+        }
+        .row-block + .row-block {
+            margin-top: 40px;
+        }
+        
+    }
+    &__block-three {
+        padding: 40px 80px;
+
+        .list {
+            .item {
+                width: 22%;
+            }
+            .item-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 40px;
+                    width: auto;
+                }
+            }
+        }
+    }
+    &__block-four {
+        padding: 40px 80px;
+
+        .row-block {
+            .list {
+                .item {
+                    position: relative;
+                    margin-left: 20px;
+                    padding-left: 10px;
+                    margin-bottom: 20px;
+                    list-style: auto;
+
+                }
+            }
+        }
+    }
+}
+
+/*======================================================================== thanh tuu */
+.achievement-primary {
+    &__top {
+        .article {
+            max-width: 680px;
+            margin: auto;
+        }
+        .article-time {
+            border-radius: 10px;
+            padding: 8px 25px;
+            display: inline-block;
         }
     }
 }
