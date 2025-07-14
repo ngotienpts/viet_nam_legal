@@ -17,6 +17,70 @@
         width: auto;
     }
 }
+.forward {
+ 
+    &-item {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 20px;
+      
+    }
+
+    &-item {
+        &.active {
+            .forward-link{
+                background-image: linear-gradient(180deg, #A61B28, #D44C58);
+                color: #fff;
+            }
+        }
+    }
+    &-link {
+      background-color: transparent;
+      padding: 14px 25px;
+      border-radius: 999px;
+      border: none;
+      color: #333;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      display: inline-block;
+
+      &:hover {
+        background-image: linear-gradient(180deg, #A61B28, #D44C58);
+        color: #fff;
+      }
+    }
+}
+
+.pagination {
+    flex-wrap: wrap;
+    &-item {
+        margin: 4px;
+       
+        &.active {
+            .pagination-link {
+                color: #A61B28;
+                border-bottom: 1px solid #A61B28;
+            }
+        }
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+
+        &:hover {
+            color: #A61B28;
+        }
+
+        img {
+            height: 20px;
+            width: auto;
+        }
+    }
+
+}
 /*======================================================================== aboust us */
 .about-us-primary {
     &__row {
@@ -266,6 +330,87 @@
             border-radius: 10px;
             padding: 8px 25px;
             display: inline-block;
+        }
+    }
+
+    &__bot {
+        margin-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        .article {
+            cursor: pointer;
+        }
+        .article-time {
+            text-align: center;
+            font-size: 30px;
+            color: #888;
+
+            &:hover {
+                color: #A61B28;
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            .article-time {
+                color: #A61B28;
+                transform: scale(1.5);
+            }
+        }
+
+    }
+}
+
+/*======================================================================== giay phep */
+.license-primary {
+    &__slide {
+        padding-bottom: 60px;
+        .swiper-slide {
+            transform: scale(0.9);
+            opacity: 0.6;
+        }
+        
+        .swiper-slide.swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+/*======================================================================== dich vu phap ly */
+.legal-services-primary {
+    &__container {
+        .article-img {
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+            }
+        }
+    }
+}
+/*======================================================================== kiến thức pháp lý */
+.legal-knowledge-secondary {
+     &__bg {
+        position: absolute;
+        inset: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__large {
+        .article-content {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 66%, rgba(0, 0, 0, 0.5) 100%);
+            justify-content: flex-end;
+            top: auto;
+        }
+        .article-inner img{
+            transition: transform 0.3s;
+        }
+        .article-inner:hover .article-inner__img {
+            transform: scale(1.07,1.07);
         }
     }
 }

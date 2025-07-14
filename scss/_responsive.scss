@@ -378,6 +378,9 @@
         grid-gap: 0.625rem;
         gap: 0.625rem;
     }
+    .pt-md-0 {
+        padding-top: 0;
+    }
     .mt-md-0 {
         margin-top: 0;
     }
@@ -615,6 +618,30 @@
 
         }
     }
+
+    // ---------------------------------thanh tuu
+    .achievement-primary {
+        &__top {
+            .article-content {
+                padding: 24px 0 0;
+            }
+        }
+    }
+    // --------------------------------- kien thuc phap ly
+    .forward {
+        &-item {
+            display: block;
+            width: 100%;
+        }
+        &-link {
+            padding: 10px 25px;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+    }
+    // ---------------------------------
+    // ---------------------------------
 
 
 
@@ -937,7 +964,7 @@
             }
         }
     }
-    // detail nhan su
+    // ---------------------------------------------detail nhan su
     .human-resources-detail-primary {
         &__heading {
             .title-1 {
@@ -1008,6 +1035,48 @@
             }
         }
     }
+
+    // --------------------------------------------- thanh tuu
+    .achievement-primary {
+        &__content {
+            margin-top: 20px;
+            padding-top: 0;
+
+        }
+        
+        &__top {
+            .article-content {
+                text-align: center;
+            }
+            .article-des {
+                font-size: 16px;
+                text-align: left;
+            }
+        }
+
+
+        &__bot {
+            .article-time {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .achievement-secondary {
+        &__content {
+            .article-content {
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            .article-title {
+                font-size: 14px;
+            }
+        }
+    }
+    // --------------------------------------------- 
+    // --------------------------------------------- 
+    // --------------------------------------------- 
 
 
     // --------------------------------------------------------------------detail

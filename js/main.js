@@ -341,52 +341,54 @@ document.addEventListener("DOMContentLoaded", function () {
             var prev = item.querySelector(".swiper-button-prev");
 
             var small = new Swiper(sliderSmall, {
-                spaceBetween: 15,
-                slidesPerView: 5, 
-                slidesPerGroup: 1,
-                watchSlidesProgress: true,
-                watchOverflow: true,
-                freeMode: false, 
-                observer: true,
-                observeParents: true,
-                navigation: {
-                    nextEl: next || null,
-                    prevEl: prev || null,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 5,
-                        spaceBetween: 15,
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    watchSlidesProgress: true,
+                    watchOverflow: true,
+                    freeMode: false, 
+                    observer: true,
+                    observeParents: true,
+                    centeredSlides: true,
+                    centerInsufficientSlides: true,
+                    // autoplay: {
+                    //     delay: 4000,
+                    //     disableOnInteraction: false,
+                    // },
+                    loop: true,
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
                     },
-                    768: {
-                        slidesPerView: 5,
-                        spaceBetween: 20,
+                       
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 3,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                        },
+                        1200: {
+                            slidesPerView: 7,
+                        },
                     },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 20,
-                    },
-                    1200: {
-                        slidesPerView: 7,
-                        spaceBetween: 20,
-                    },
-                },
-            });
+                });
             var large = new Swiper(sliderLarge, {
                 spaceBetween: 10,
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 observer: true,
-                    observeParents: true,
-                    grabCursor: true,
-              
+                observeParents: true,
+                grabCursor: true,
                 thumbs: {
                     swiper: small,
                 },
             });
-
-            small.on('click', function () {
-                large.slideTo(small.clickedIndex);
+            small.on('slideChange', function () {
+                large.slideToLoop(small.realIndex);
             });
 
         });
@@ -432,6 +434,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
+    
     
     // xử lý sự kiện show menu mobile
     function handleMenuMobile () {
