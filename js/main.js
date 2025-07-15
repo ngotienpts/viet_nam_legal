@@ -40,6 +40,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Xử lý upload file
+     function handleUploadFile() {
+        const inputs = document.querySelectorAll( '.js__inputFile' );
+        if (inputs.length === 0) return;
+
+        Array.prototype.forEach.call( inputs, function( input )
+        {
+            var label	 = input.nextElementSibling,
+                labelVal = label.innerHTML;
+
+            input.addEventListener('change', function(e) {
+                let fileName = e.target.value.split('\\').pop(); 
+
+                if (fileName) {
+                    label.querySelector('div').innerHTML = fileName;
+                } else {
+                    label.innerHTML = labelVal;
+                }
+            });
+        });
+
+    }
+
     // xử lý sự kiện collapse
     function handleCollapse () {
 
@@ -620,6 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderGallerySecondary();
         initSliderScaleCenter();
         // end slide
+        handleUploadFile();
         handleBackTop();
         initFancybox();
         handleShowPopup();

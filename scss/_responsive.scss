@@ -60,6 +60,14 @@
             padding-right: 15px;
         }
     }
+    // ----------------------------------------------- tuyen dung
+    .recruitment-tertiary {
+        &__bot {
+            .recruitment-tertiary__info {
+                padding-left: 100px;
+            }
+        }
+    }
 
     // --------------------------------------------------------------------detail
    
@@ -347,6 +355,49 @@
         &__block-one {
             .article-img {
                 padding-bottom: 56.25%;
+            }
+        }
+    }
+    // ------------------------------------------------ tuyen dung
+    .recruitment-secondary {
+        &__right {
+            margin-top: 30px;
+        }
+        &__list {
+            grid-gap: 12px;
+            gap: 12px;
+        }
+    }
+    .recruitment-tertiary {
+        &__top {
+            .article {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__bot {
+            
+
+            .recruitment-tertiary__action {
+                
+            }
+            .recruitment-tertiary__info {
+                padding-left: 0;
+                padding-top: 50px;
+            }
+        }
+    }
+    .gallery {
+        grid-gap: 10px;
+        gap: 10px;
+
+        &-item {
+            border-radius: 10px;
+
+            &:nth-child(6n+1){
+                img {
+                    height: 510px;
+                }
             }
         }
     }
@@ -650,7 +701,104 @@
             text-align: center;
         }
     }
-    // ---------------------------------
+    // --------------------------------- tuyen dung
+    .recruitment-tertiary {
+        &__top {
+            .article {
+                .ratio-21x9 {
+                    padding-bottom: 56.25%;
+                }
+            }
+        }
+
+        &__bot {
+            .recruitment-tertiary__info {
+                .info-list {
+                    padding-left: 0;
+                    margin-left: 0;
+                    padding-top: 10px;
+                    border-left: none;
+                }
+            }
+        }
+
+    }
+    .popup {
+        .close-popup {
+            width: 33px;
+            height: 33px;
+
+            img {
+                width: 12px;
+            }
+        }
+        &-container {
+            padding: 15px;
+        }
+        &-content {
+            & figure {
+                img {
+                    border-radius: 15px;
+                }
+            }
+
+            & p,
+            & li {
+                font-size: 16px;
+        
+            }
+
+            &  h2 {
+                font-size: 20px;
+            }
+            &  h3 {
+                font-size: 18px;
+            }
+            & h4 {
+                font-size: 16px;
+            }
+            &  h5 {
+                font-size: 16px;
+            }
+            & h6 {
+                font-size: 16px;
+            }
+        
+            & blockquote {
+                padding: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 16px;
+        
+                & p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .gallery {
+            grid-template-columns: repeat(2,1fr);
+
+            &-item {
+                
+                img {
+                    height: 200px;
+                }
+               
+                &:nth-child(6n+1) {
+                    img {
+                        height: 410px;
+                    }
+                }
+
+                &:nth-child(6n+4) {
+                    grid-column: span 2;
+                }
+                &:nth-child(6n+5) {
+                    grid-column: span 1;
+                }
+            }
+    }
     // ---------------------------------
 
 
@@ -1188,7 +1336,144 @@
             }
         }
     }
-    // --------------------------------------------- 
+    // --------------------------------------------- tuyen dụng
+    .recruitment-secondary {
+        &__decription {
+            font-size: 16px;
+        }
+
+        &__list {
+            .article {
+                padding: 20px 30px;
+                &:nth-child(1) {
+                    border-top-right-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                }
+                &:nth-child(2) {
+                    border-top-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+                &:nth-child(3) {
+                    border-top-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+                &:nth-child(4) {
+                    border-top-right-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                }
+            }
+
+            .article-img {
+                img {
+                    height: 40px;
+                    width: auto;
+                }
+            }
+            .article-title {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .recruitment-tertiary {
+        &__top {
+            .article {
+                border-radius: 10px;
+
+                &-special {
+                    .article-content {
+                        padding: 20px 15px;
+                    }
+                    .item-info__icon {
+                         img {
+                            height: 20px;
+                        }
+                    }
+                    .item-info__text {
+                        font-size: 16px;
+                    }
+                }
+
+                &:not(.article-special) {
+                    padding: 20px 15px;
+                }
+            }
+        }
+
+        &__bot {
+            .recruitment-tertiary__action {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .text {
+                    margin: 15px 0;
+                }
+            }
+
+            .recruitment-tertiary__info {
+                .heading {
+                    font-size: 18px;
+                }
+                .list-info {
+                    font-size: 16px;
+                }
+                .item-info__icon img {
+                    width: 16px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .gallery {
+        &-item {
+            img {
+                height: 110px;
+            }
+            
+            &:nth-child(6n+1) {
+                img {
+                    height: 230px;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------- faq
+    .faq-primary {
+        &__item {
+            .faq-nummber {
+                padding: 10px;
+                font-size: 24px;
+            }
+            .faq-item {
+                &__title {
+                    padding: 20px 12px;
+                    font-size: 16px;
+                }
+                &__content {
+                    padding: 12px;
+                }
+
+                &__des {
+                    font-size: 16px;
+                }
+
+                &__right {
+                    padding: 12px;
+                    img {
+                        width: 14px;
+                    }
+                }
+            }
+
+           
+
+            
+        }
+    }
+  
 
 
     // --------------------------------------------------------------------detail
