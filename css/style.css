@@ -1722,7 +1722,7 @@ p + p {
 
 .logo-img {
   height: 75px;
-  height: auto;
+  width: auto;
 }
 
 .search-pc {
@@ -3212,7 +3212,7 @@ p + p {
   grid-column: span 1;
   grid-row: span 1;
 }
-.gallery-item:nth-child(4n+4) {
+.gallery-item:nth-child(6n+4) {
   grid-column: span 2;
   grid-row: span 1;
 }
