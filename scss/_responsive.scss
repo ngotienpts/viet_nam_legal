@@ -50,6 +50,14 @@
     }
 
     // --------------------------------------------------------------------cate
+    .human-resources-detail-primary {
+    
+        &__block-one {
+            .article-content {
+                max-height: 560px;
+            }
+        }
+    }   
     // -------------------------------------------------contact 
     .contact-tertiary {
         padding-bottom: 40px;
@@ -258,6 +266,14 @@
 
 
     // --------------------------------------------------------------------cate
+    .human-resources-detail-primary {
+    
+        &__block-one {
+            .article-content {
+                max-height: 470px;
+            }
+        }
+    }   
 
 
     // --------------------------------------------------------------------detail
@@ -353,11 +369,16 @@
     // detail nhan su
     .human-resources-detail-primary {
         &__block-one {
+            .article-content {
+                max-height: 100%;
+                overflow: unset;
+            }
             .article-img {
                 padding-bottom: 56.25%;
             }
         }
     }
+ 
     // ------------------------------------------------ tuyen dung
     .recruitment-secondary {
         &__right {

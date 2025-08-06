@@ -298,6 +298,11 @@ p {
     display: block;
     padding-bottom: 100%;
 }
+.ratio-7x6 {
+  position: relative;
+  display: block;
+  padding-bottom: 86.85%;
+}
 .ratio-4x3 {
     position: relative;
     display: block;
@@ -314,6 +319,11 @@ p {
     display: block;
     padding-bottom: 56.25%;
 }
+.ratio-21x8 {
+  position: relative;
+  display: block;
+  padding-bottom: 49%;
+}
 .ratio-21x9 {
     position: relative;
     display: block;
@@ -328,6 +338,8 @@ p {
 
 .ratio-5x7 img,
 .ratio-6x7 img,
+.ratio-7x6 img,
+.ratio-21x8 img,
 .ratio-4x3 img,
 .ratio-4x6 img,
 .ratio-1x1 img,

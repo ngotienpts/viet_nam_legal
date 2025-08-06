@@ -423,6 +423,12 @@
       &-slide-pc  {
         .left {
           padding-right: 12px;
+
+          .article-row-one {
+            .info {
+              // display: none;
+            }
+          }
         }  
         
         .right {
